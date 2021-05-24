@@ -11,8 +11,9 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class AddressBookMain {
+	public AddressBookJSON addressBookJSON;
 
-	private ArrayList<Contacts> contactArray;
+	static private ArrayList<Contacts> contactArray;
 	private Map<String, Contacts> contactMap;
 	private Map<String,Contacts> cityToContactEntryMap;
 	private Map<String,Contacts> stateToContactEntryMap;
@@ -63,6 +64,10 @@ public class AddressBookMain {
 		contactMap.put(firstName, con);
 	}
 
+	public void addContactToList(Contacts contact)
+	{
+		contactArray.add(contact);
+	}
 	/**
 	 * uc3
 	 */
